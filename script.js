@@ -1,13 +1,24 @@
 function check(){
-	if (document.getElementById('username')<=0)
-	{
-		alert("you didnt enter username");
-	}
-	else if (document.getElementById('pass')!=12345678)
-	{
-		alert("you entered wrong password");
-	}
+	var user = document.getElementById('username').value;
+	var pasword =  document.getElementById('pass').value;
+	var regex = /\d/g;
 
+	if (regex.test(user) == true && user.length()==2)
+	{
+		alert("you entered right username");
+	
+	if (pasword==12345678)
+	{
+		alert("correct password");
+		document.getElementById('heading').innerHTML="perfect"
+	}
+	else{
+		alert("wrong password");
+	}
+	else{
+		alert("wrong way of doing");
+	}
+	return false;
 
 
 }
